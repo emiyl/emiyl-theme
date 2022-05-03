@@ -8,6 +8,7 @@ export const localTheme = (options: DefaultThemeOptions): Theme => {
     name: 'vuepress-theme-local',
     extends: defaultTheme(options),
     alias: {
+      '@theme/Page.vue': path.resolve(__dirname, './components/Page.vue'),
       '@theme/Home.vue': path.resolve(__dirname, './components/Home.vue'),
       '@theme/HomeHero.vue': path.resolve(__dirname, './components/HomeHero.vue'),
     },

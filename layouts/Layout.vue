@@ -18,34 +18,32 @@ const discordNoticeText = computed(() => {
     const ret = new MarkdownIt().render(themeLocaleData.value.discordNoticeText)
     return ret
 })
+
+const widePage = frontmatter.value.widePage || false
 </script>
 
 <template>
   <ParentLayout>
     <template #page-top>
-        <div class="theme-default-content" style="padding: 0;">
-            <h1>{{ pageTitle }}</h1>
-            <div v-if="discordNoticeText" class="custom-container tip"><p v-html="discordNoticeText"/></div>
+        <h1>{{ pageTitle }}</h1>
+        <div v-if="discordNoticeText" class="custom-container tip"><p v-html="discordNoticeText"/></div>
 
-            <div v-html="`
-            <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8267943526926430'
-                crossorigin='anonymous'></script>
-            <!-- Ad Unit 0 -->
-            <ins class='adsbygoogle'
-                style='display:block'
-                data-ad-client='ca-pub-8267943526926430'
-                data-ad-slot='1237978719'
-                data-ad-format='auto'
-                data-full-width-responsive='true'></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-            `"/>
-        </div>
+        <div v-html="`
+        <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8267943526926430'
+            crossorigin='anonymous'></script>
+        <!-- Ad Unit 0 -->
+        <ins class='adsbygoogle'
+            style='display:block'
+            data-ad-client='ca-pub-8267943526926430'
+            data-ad-slot='1237978719'
+            data-ad-format='auto'
+            data-full-width-responsive='true'></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        `"/>
     </template>
     <template #page-bottom>
-        <div class="theme-default-content" style="padding: 0;">
-        </div>
     </template>
   </ParentLayout>
 </template>
