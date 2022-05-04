@@ -27,7 +27,8 @@ const widePage = frontmatter.value.widePage || false
     <template #page-top>
         <h1 id="pageTitle">{{ pageTitle }}</h1>
         <div v-if="discordNoticeText" class="custom-container tip"><p v-html="discordNoticeText"/></div>
-
+    </template>
+    <template #page-bottom>
         <div v-html="`
         <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8267943526926430'
             crossorigin='anonymous'></script>
@@ -42,8 +43,6 @@ const widePage = frontmatter.value.widePage || false
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         `"/>
-    </template>
-    <template #page-bottom>
     </template>
   </ParentLayout>
 </template>
