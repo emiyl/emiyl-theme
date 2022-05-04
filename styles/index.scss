@@ -105,17 +105,21 @@ table {
 				width: 100%;
 			}
 
+			&:last-of-type .tab-link  {
+				border-bottom-width: 1px;
+				border-radius: 0 0 0.25rem 0.25rem;
+			}
+
 			&:first-of-type .tab-link {
-				border-radius: 0.25rem 0.25rem 0 0;
+				border-radius: 0.25rem 0.25rem 0 0 !important;
 			}
 		}
 	}
 
 	.tab {
 		display: none;
-		order: 99;
 		padding: 1rem 1rem 1rem 1rem;
-		margin-bottom: 1rem;
+		order: 999;
 		width: 100%;
 		border: 1px solid var(--c-border);
 
@@ -128,8 +132,21 @@ table {
 		}
 
 		@media screen and (max-width: 575px) {
+			border-radius: 0;
+			border-bottom-width: 0;
+			order: 0;
+		}
+	}
+
+	@media screen and (max-width: 575px) {
+		.tab-last {
+			border-bottom-width: 1px;
 			border-radius: 0 0 0.25rem 0.25rem;
 		}
+	}
+
+	input:checked + .tab-link {
+		border-radius: 0;
 	}
 
 	input:checked + .tab-link + .tab {
