@@ -25,12 +25,12 @@ const widePage = frontmatter.value.widePage || false
         <deviceGroupList v-else-if="chartType == 'deviceGroupList'"/>
         <deviceGroup v-else-if="chartType == 'deviceGroup'"/>
       </template>
+
+      <slot name="bottom" />
     </div>
 
     <PageMeta />
 
     <PageNav />
-
-    <slot name="bottom" />
   </main>
 </template>
