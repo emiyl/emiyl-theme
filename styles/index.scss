@@ -164,6 +164,20 @@ table {
 	}
 }
 
+.navigator {
+	font-size: .9em;
+	
+	a {
+		color: inherit;
+		font-weight: 600;
+	}
+
+	span::after { 
+		content: ">";
+		padding-inline: .5em;
+		font-weight: 200;
+	}
+}
 
 .heroImage {
 	background-size: cover;
@@ -227,4 +241,10 @@ table {
 
 .home {
 	padding-top: 1em !important;
+}
+
+@media (max-width: 959px) {
+	.theme-default-content:not(.custom) {
+		padding-top: 0rem;
+	}
 }
