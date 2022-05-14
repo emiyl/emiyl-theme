@@ -4,12 +4,16 @@
 
     --c-bg: #f6f6f6;
     --c-bg-light: #f0f0f0;
+
+    --c-container-bg: var(--c-bg-light);
+    --c-tip-bg: #e6edef;
 }
 
 html.dark {
     --c-brand: #30bcd5;
 
     --c-tip: #3992a3;
+    --c-tip-bg: var(--c-bg-light);
     --c-warning: #ceab00;
     --c-warning-bg: var(--c-tip-bg);
     --c-warning-title: #ceac03;

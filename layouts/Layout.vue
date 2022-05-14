@@ -26,7 +26,7 @@ const widePage = frontmatter.value.widePage || false
   <ParentLayout>
     <template #page-top>
         <h1 id="pageTitle">{{ pageTitle }}</h1>
-        <div v-if="discordNoticeText" class="custom-container tip"><p v-html="discordNoticeText"/></div>
+        <div v-if="discordNoticeText" class="custom-container none"><p v-html="discordNoticeText"/></div>
     </template>
     <template #page-bottom>
         <div v-html="`
