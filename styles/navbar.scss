@@ -23,19 +23,21 @@
 }
 
 @media (max-width: 629px) {
-    .navbar-item .fa-github {
+    .navbar-item .icon {
         visibility: hidden;
         font-family: var(--c-font-family);
         font-size: 1px;
         letter-spacing: -1px;
     }
 
-    .navbar-item .fa-github::after { 
+    .navbar-item i::after { 
         visibility: visible;
-        content: "GitHub";
-        font-size: 16px;
         font-size: 1rem;
         letter-spacing: normal;
+    }
+
+    .navbar-item .fa-github::after { 
+        content: "GitHub";
     }
 }
 
