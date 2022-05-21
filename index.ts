@@ -13,6 +13,7 @@ export const localTheme = (options: DefaultThemeOptions): Theme => {
       '@theme/PageMeta.vue': path.resolve(__dirname, './components/PageMeta.vue'),
       '@theme/Home.vue': path.resolve(__dirname, './components/Home.vue'),
       '@theme/HomeHero.vue': path.resolve(__dirname, './components/HomeHero.vue'),
+      '@theme/NavbarDropdown.vue': path.resolve(__dirname, './components/NavbarDropdown.vue'),
     },
     layouts: {
       Layout: path.resolve(__dirname, 'layouts/Layout.vue'),
