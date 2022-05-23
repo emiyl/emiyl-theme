@@ -42,8 +42,14 @@
         letter-spacing: normal;
     }
 
+    .navbar-item .fa-globe::after { 
+        content: "Language";
+        padding-left: .5em;
+    }
+
     .navbar-item .fa-github::after { 
         content: "GitHub";
+        padding-left: .5em;
     }
 }
 
