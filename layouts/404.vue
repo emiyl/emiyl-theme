@@ -14,7 +14,7 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
 
 <template>
   <div class="theme-container">
-    <div class="theme-default-content">
+    <div class="not-found-section theme-default-content">
       <h1>404</h1>
 
       <blockquote>{{ getMsg() }}</blockquote>
@@ -27,4 +27,10 @@ const homeText = themeLocale.value.backToHome ?? 'Back to home'
 <style lang="scss">
 @use '../styles/index.scss';
 @use '../styles/palette.scss';
+
+.not-found-section {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	padding: 2rem 2.5rem;
+}
 </style>
