@@ -18,6 +18,7 @@ const widePage = frontmatter.value.widePage || false
 
       <Content v-if="!chartType" />
       <template v-else>
+        <firmwareVersionLookup v-if="chartType == 'firmwareVersionLookup'"/>
         <firmwareVersion v-if="chartType == 'firmwareVersion'"/>
         <jailbreak v-else-if="chartType == 'jailbreak'"/>
         <device v-else-if="chartType == 'device'"/>
