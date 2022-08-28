@@ -4,6 +4,8 @@ import HomeFeatures from '@theme/HomeFeatures.vue'
 import HomeFooter from '@theme/HomeFooter.vue'
 import HomeHero from '@theme/HomeHero.vue'
 
+import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
+const adUnits = useThemeLocaleData().value.adUnits
 </script>
 
 <template>
@@ -13,20 +15,10 @@ import HomeHero from '@theme/HomeHero.vue'
     <main class="home">
         <HomeFeatures />
         <HomeContent />
-        <div v-html="`
-            <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8267943526926430'
-                crossorigin='anonymous'></script>
-            <!-- Ad Unit 0 -->
-            <ins class='adsbygoogle'
-                style='display:block'
-                data-ad-client='ca-pub-8267943526926430'
-                data-ad-slot='1237978719'
-                data-ad-format='auto'
-                data-full-width-responsive='true'></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        `"/>
+        <template v-for="(unit, index) in adUnits" :key="unit">
+            <div :id="`waldo-tag-${unit}`"></div>
+            <hr v-if="index < adUnits.length"/>
+        </template>
         <HomeFooter />
     </main>
 </template>

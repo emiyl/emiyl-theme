@@ -9,12 +9,17 @@ const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()
 const pageTitle = frontmatter.value.title
 const chartType = frontmatter.value.chartType || ''
 const widePage = frontmatter.value.widePage || false
+
+import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
+const adUnits = useThemeLocaleData().value.adUnits
 </script>
 
 <template>
   <main class="page">
     <div :class="widePage ? 'home' : 'theme-default-content'">
       <slot name="top" />
+
+      <div v-if="adUnits && adUnits.length > 0" :id="`waldo-tag-${adUnits[0]}`"></div>
 
       <Content v-if="!chartType" />
       <template v-else>
@@ -26,6 +31,8 @@ const widePage = frontmatter.value.widePage || false
         <deviceGroupList v-else-if="chartType == 'deviceGroupList'"/>
         <deviceGroup v-else-if="chartType == 'deviceGroup'"/>
       </template>
+
+      <div v-if="adUnits && adUnits.length > 1" :id="`waldo-tag-${adUnits[1]}`"></div>
 
       <slot name="bottom" />
     </div>
