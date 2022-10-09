@@ -65,7 +65,7 @@
 
 	.tab {
 		display: none;
-		padding: 1rem 1rem 1rem 1rem;
+		padding: .5rem 1.5rem;
 		order: 999;
 		width: 100%;
 		border: 1px solid var(--c-border);
@@ -73,6 +73,10 @@
 		h1,h2,h3,h4,h5,h6 {
 			padding-top: 1.1em;
 			margin-top: 0;
+		}
+
+		.header-anchor {
+			display: none;
 		}
 
 		@media screen and (min-width: 576px) {
