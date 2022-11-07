@@ -19,7 +19,7 @@ const adUnits = useThemeLocaleData().value.adUnits
     <div :class="widePage ? 'home' : 'theme-default-content'">
       <slot name="top" />
 
-      <div v-if="adUnits && adUnits.length > 0" :id="`waldo-tag-${adUnits[0]}`"></div>
+      <div v-if="adUnits && adUnits.length > 0" :id="`waldo-tag-${adUnits[0]}`" style="margin-bottom: 1em;"></div>
 
       <Content v-if="!chartType" />
       <template v-else>
