@@ -1,8 +1,11 @@
+$background: rgb(246, 246, 246);
+$dm-background: rgb(34, 39, 46);
+
 :root {
     --c-brand: #30bcd5;
     --c-tip: #30bcd5;
 
-    --c-bg: #f6f6f6;
+    --c-bg: #{$background};
     --c-bg-light: #f0f0f0;
 
     --c-container-bg: var(--c-bg-light);
@@ -12,6 +15,7 @@
 html.dark {
     --c-brand: #30bcd5;
 
+    --c-bg: #{$dm-background};
     --c-tip: #3992a3;
     --c-tip-bg: var(--c-bg-light);
     --c-warning: #ceab00;

@@ -89,7 +89,8 @@ const HomeHeroImage: FunctionalComponent = () => {
 <template>
     <header class="hero heroImage" :style="{
         'background-image':'linear-gradient(rgba(0, 0, 0, ' + heroFilter + '), rgba(0, 0, 0, ' + heroFilter + ')), url(' + heroImage + ')',
-        'background-color': heroColour
+        'background-color': heroColour,
+        'margin-top': '26px'
     }">
         <div class="heroWrapper">
             <h1 v-if="heroText" id="main-title">
