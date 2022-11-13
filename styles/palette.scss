@@ -2,8 +2,8 @@ $background: rgb(246, 246, 246);
 $dm-background: rgb(34, 39, 46);
 
 :root {
-    --c-brand: #30bcd5;
-    --c-brand-light: hsl(189, 70%, 65%);
+    --c-brand: hsl(189, 80%, 45%);
+    --c-brand-light: hsl(189, 90%, 55%);
     --c-tip: #30bcd5;
 
     --c-bg: #{$background};
@@ -14,9 +14,9 @@ $dm-background: rgb(34, 39, 46);
 }
 
 html.dark {
-    --c-brand: #30bcd5;
-    --c-brand-light: hsl(189, 70%, 65%);
-
+    --c-brand: hsl(189, 80%, 45%);
+    --c-brand-light: hsl(189, 90%, 55%);
+    
     --c-bg: #{$dm-background};
     --c-tip: #3992a3;
     --c-tip-bg: var(--c-bg-light);
