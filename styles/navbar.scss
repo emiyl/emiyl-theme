@@ -65,10 +65,12 @@ html.dark .navbar {
     .navbar-item .fa-globe::after { 
         content: "Language";
         padding-left: .5em;
+        font-weight: 600;
     }
 
     .navbar-item .fa-github::after { 
         content: "GitHub";
+        font-weight: 600;
     }
 }
 
