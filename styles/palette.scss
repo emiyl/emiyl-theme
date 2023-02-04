@@ -3,6 +3,7 @@ $dm-background: rgb(34, 39, 46);
 $background-light: #f0f0f0;
 $dm-background-light: #2b313a;
 $container-bg: $background-light;
+$dm-container-bg: $dm-background-light;
 $dm-details-bg: #323843;
 
 $brand: hsl(189, 80%, 45%);
@@ -40,6 +41,8 @@ html.dark {
     --c-brand-light: #{$brand-light};
     
     --c-bg: #{$dm-background};
+    --c-container-bg: #{$dm-container-bg};
+
     --c-tip: #{$dm-tip};
     --c-tip-bg: #{$dm-background-light};
     --c-tip-bg-hover: #{$dm-tip-bg-hover};
