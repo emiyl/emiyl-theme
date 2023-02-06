@@ -22,3 +22,14 @@ const adUnits = useThemeLocaleData().value.adUnits
         <HomeFooter />
     </main>
 </template>
+
+<style lang="scss" scoped>
+.hero {
+	padding: 2em 0 0;
+	display: block;
+}
+
+.home {
+	padding-top: 1em !important;
+}
+</style>
