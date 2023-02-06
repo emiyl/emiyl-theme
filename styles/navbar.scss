@@ -48,18 +48,12 @@ html.dark .navbar {
     }
 }
 
-@media (max-width: 629px) {
-    .navbar-item .icon {
-        visibility: hidden;
-        font-family: var(--c-font-family);
-        font-size: 1px;
-        letter-spacing: -1px;
-    }
-
+@media (max-width: 720px) {
     .navbar-item i::after { 
         visibility: visible;
         font-size: 1rem;
         letter-spacing: normal;
+        padding-left: .5em;
     }
 
     .navbar-item .fa-globe::after { 
@@ -70,6 +64,11 @@ html.dark .navbar {
 
     .navbar-item .fa-github::after { 
         content: "GitHub";
+        font-weight: 600;
+    }
+
+    .navbar-item .fa-twitter::after { 
+        content: "Twitter";
         font-weight: 600;
     }
 }
