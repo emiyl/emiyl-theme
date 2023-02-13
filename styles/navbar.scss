@@ -71,6 +71,11 @@ html.dark .navbar {
         content: "Twitter";
         font-weight: 600;
     }
+
+    .navbar-item .fa-discord::after { 
+        content: "Discord";
+        font-weight: 600;
+    }
 }
 
 .navbar-dropdown-wrapper:hover .navbar-dropdown, .navbar-dropdown-wrapper.open .navbar-dropdown {
