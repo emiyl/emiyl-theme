@@ -64,6 +64,7 @@ html.dark .navbar {
 
     .navbar-item .fa-github::after { 
         content: "GitHub";
+        padding-left: .5em;
         font-weight: 600;
     }
 
