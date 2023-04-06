@@ -47,7 +47,7 @@ html.dark {
     --c-tip-bg: #{$dm-background-light};
     --c-tip-bg-hover: #{$dm-tip-bg-hover};
     --c-warning: #{$dm-warning};
-    --c-warning-bg: #{$tip-bg};
+    --c-warning-bg: var(--c-tip-bg);
     --c-warning-title: #{$dm-warning-title};
     --c-warning-text: var(--c-text);
     --c-warning-text-accent: #{$dm-warning-text-accent};
