@@ -102,3 +102,12 @@ html.dark .navbar {
 .navbar-item .external-link-icon {
     display: none;
 }
+
+.toggle-color-mode-button {
+    opacity: 1;
+    
+    .icon {
+        height: calc(1.25rem + 10px);
+        margin-top: -2px;
+    }
+}
