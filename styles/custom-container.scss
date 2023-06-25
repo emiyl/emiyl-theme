@@ -33,6 +33,12 @@ html.dark {
 	.custom-container.danger {
 		border-color: var(--c-danger);
 	}
+
+	.custom-container.tip,
+	.custom-container.warning,
+	.custom-container.danger {
+		border-color: var(--c-tip-bg);
+	}
 }
 
 .custom-container {
