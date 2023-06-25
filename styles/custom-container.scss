@@ -26,18 +26,16 @@
 }
 
 html.dark {
+	.custom-container {
+		background: var(--c-container-bg);
+	}
+	
 	.custom-container.warning {
 		border-color: var(--c-warning);
 	}
 
 	.custom-container.danger {
 		border-color: var(--c-danger);
-	}
-
-	.custom-container.tip,
-	.custom-container.warning,
-	.custom-container.danger {
-		border-color: var(--c-tip-bg);
 	}
 }
 
