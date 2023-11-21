@@ -5,13 +5,18 @@ import HomeFooter from '@theme/HomeFooter.vue'
 import HomeHero from '@theme/HomeHero.vue'
 
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
+import { usePageFrontmatter } from '@vuepress/client'
+import type { DefaultThemePageFrontmatter } from '@vuepress/theme-default/lib/shared'
+
 const adUnits = useThemeLocaleData().value.adUnits
+const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()
 </script>
 
 <template>
-    <div class="hero">
+    <div class="hero" v-if="frontmatter.hero !== false">
         <HomeHero />
     </div>
+    <div v-else style="margin-bottom: 4em;"></div>
     <main class="home">
         <HomeFeatures />
         <HomeContent />
