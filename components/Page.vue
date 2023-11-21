@@ -28,6 +28,7 @@ const adUnits = useThemeLocaleData().value.adUnits
         <jailbreak v-else-if="chartType == 'jailbreak'"/>
         <device v-else-if="chartType == 'device'"/>
         <deviceList v-else-if="chartType == 'deviceList'"/>
+        <aaronsSpecialDeviceList v-else-if="chartType == 'aaronsSpecialDeviceList'"/>
         <deviceGroupList v-else-if="chartType == 'deviceGroupList'"/>
         <deviceGroup v-else-if="chartType == 'deviceGroup'"/>
       </template>
