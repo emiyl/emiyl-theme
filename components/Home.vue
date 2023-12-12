@@ -17,7 +17,9 @@ const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()
         <HomeHero />
     </div>
     <div v-else style="margin-bottom: 4em;"></div>
-    <main class="home">
+    <main class="home" :style="{
+        'max-width': frontmatter.extrawide ? 'max(var(--homepage-width), 85vw)' : 'var(--homepage-width)'
+    }">
         <HomeFeatures />
         <HomeContent />
         <template v-for="(unit, index) in adUnits" :key="unit">
@@ -35,6 +37,7 @@ const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()
 }
 
 .home {
+    max-width: var(--homepage-width);
 	padding-top: 1em !important;
 }
 </style>
