@@ -109,15 +109,15 @@ const HomeHeroImage: FunctionalComponent = () => {
                     :class="[action.type]"
                     :item="action"
                 />-->
-                <router-link
+                <a
                   v-for="action in actions"
                   :key="action.text"
                   class="action-button"
                   :class="[action.type]"
-                  :to="action.link"
+                  :href="action.link"
                 >
                   {{ action.text }}
-                </router-link>
+                </a>
             </p>
         </div>
     </header>
