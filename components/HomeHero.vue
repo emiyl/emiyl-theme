@@ -102,13 +102,22 @@ const HomeHeroImage: FunctionalComponent = () => {
             </p>
 
             <p v-if="actions.length" class="actions">
-                <AutoLink
+                <!--<AutoLink
                     v-for="action in actions"
                     :key="action.text"
                     class="action-button"
                     :class="[action.type]"
                     :item="action"
-                />
+                />-->
+                <router-link
+                  v-for="action in actions"
+                  :key="action.text"
+                  class="action-button"
+                  :class="[action.type]"
+                  :to="action.link"
+                >
+                  {{ action.text }}
+                </router-link>
             </p>
         </div>
     </header>

@@ -5,14 +5,15 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   inheritAttrs: false,
 })
+/* eslint-enable import/order */
 </script>
 
 <script setup lang="ts">
+import { useSiteData } from '@vuepress/client'
+import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared'
 import { computed, toRefs } from 'vue'
 import type { PropType } from 'vue'
 import { useRoute } from 'vue-router'
-import { useSiteData } from '@vuepress/client'
-import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared'
 import type { NavLink } from '@vuepress/theme-default/lib/shared'
 
 const props = defineProps({
@@ -93,7 +94,7 @@ const isActive = computed(() => {
     v-bind="$attrs"
   >
     <slot name="before" />
-    <span v-html="item.text"></span>
+    {{ item.text }}
     <slot name="after" />
   </RouterLink>
   <a
@@ -106,7 +107,7 @@ const isActive = computed(() => {
     v-bind="$attrs"
   >
     <slot name="before" />
-    <span v-html="item.text"></span>
+    {{ item.text }}
     <AutoLinkExternalIcon v-if="isBlankTarget" />
     <slot name="after" />
   </a>
