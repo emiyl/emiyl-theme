@@ -94,7 +94,7 @@ const isActive = computed(() => {
     v-bind="$attrs"
   >
     <slot name="before" />
-    {{ item.text }}
+    <span v-html="item.text"/>
     <slot name="after" />
   </RouterLink>
   <a
@@ -107,7 +107,7 @@ const isActive = computed(() => {
     v-bind="$attrs"
   >
     <slot name="before" />
-    {{ item.text }}
+    <span v-html="item.text"/>
     <AutoLinkExternalIcon v-if="isBlankTarget" />
     <slot name="after" />
   </a>
