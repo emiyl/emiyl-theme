@@ -1,9 +1,9 @@
 <script setup>
-import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
+import ParentLayout from '@vuepress/theme-default/layouts/Layout.vue'
 import { computed } from 'vue'
 
 import { usePageFrontmatter } from '@vuepress/client'
-import { useThemeLocaleData } from '@vuepress/plugin-theme-data/lib/client'
+import { useThemeLocaleData } from '@vuepress/plugin-theme-data/client'
 import MarkdownIt from 'markdown-it'
 const frontmatter = usePageFrontmatter()
 const themeLocaleData = useThemeLocaleData()

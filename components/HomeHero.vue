@@ -9,8 +9,8 @@ import {
 import { isArray } from '@vuepress/shared'
 import type { FunctionalComponent } from 'vue'
 import { computed, h } from 'vue'
-import type { DefaultThemeHomePageFrontmatter } from '@vuepress/theme-default/lib/shared'
-import { useDarkMode } from '@vuepress/theme-default/lib/client/composables'
+import type { DefaultThemeHomePageFrontmatter } from '@vuepress/theme-default/shared'
+import { useDarkMode } from '@vuepress/theme-default/client'
 
 const frontmatter = usePageFrontmatter<DefaultThemeHomePageFrontmatter>()
 const siteLocale = useSiteLocaleData()

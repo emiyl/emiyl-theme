@@ -11,9 +11,9 @@ import type {
   DefaultThemeNormalPageFrontmatter,
   DefaultThemePageData,
   NavLink,
-} from '@vuepress/theme-default/lib/shared'
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
-import { resolveEditLink } from '@vuepress/theme-default/lib/client/utils'
+} from '@vuepress/theme-default/shared'
+import { useThemeLocaleData } from '@vuepress/theme-default/client'
+import { resolveEditLink } from '@vuepress/theme-default/client'
 
 const useEditNavLink = (): ComputedRef<null | NavLink> => {
   const themeLocale = useThemeLocaleData()

@@ -4,7 +4,7 @@ import DropdownTransition from '@theme/DropdownTransition.vue'
 import { computed, ref, toRefs, watch } from 'vue'
 import type { PropType } from 'vue'
 import { useRoute } from 'vue-router'
-import type { NavbarItem, ResolvedNavbarItem } from '@vuepress/theme-default/lib/shared'
+import type { NavbarItem, ResolvedNavbarItem } from '@vuepress/theme-default/shared'
 
 const props = defineProps({
   item: {

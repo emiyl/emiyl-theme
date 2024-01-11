@@ -3,14 +3,14 @@ import PageMeta from '@theme/PageMeta.vue'
 import PageNav from '@theme/PageNav.vue'
 
 import { usePageData, usePageFrontmatter } from '@vuepress/client'
-import type { DefaultThemePageFrontmatter } from '@vuepress/theme-default/lib/shared'
+import type { DefaultThemePageFrontmatter } from '@vuepress/theme-default/shared'
 const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()
 
 const pageTitle = frontmatter.value.title
 const chartType = frontmatter.value.chartType || ''
 const widePage = frontmatter.value.widePage || false
 
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
+import { useThemeLocaleData } from '@vuepress/theme-default/client'
 const adUnits = useThemeLocaleData().value.adUnits
 </script>
 

@@ -4,9 +4,9 @@ import HomeFeatures from '@theme/HomeFeatures.vue'
 import HomeFooter from '@theme/HomeFooter.vue'
 import HomeHero from '@theme/HomeHero.vue'
 
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
+import { useThemeLocaleData } from '@vuepress/theme-default/client'
 import { usePageFrontmatter } from '@vuepress/client'
-import type { DefaultThemePageFrontmatter } from '@vuepress/theme-default/lib/shared'
+import type { DefaultThemePageFrontmatter } from '@vuepress/theme-default/shared'
 
 const adUnits = useThemeLocaleData().value.adUnits
 const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>()

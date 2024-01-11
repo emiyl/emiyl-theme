@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables'
+import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/client'
 
 const themeLocale = useThemeLocaleData()
 const isDarkMode = useDarkMode()
